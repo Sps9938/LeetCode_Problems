@@ -1,0 +1,1 @@
+rintLength(head,tail);

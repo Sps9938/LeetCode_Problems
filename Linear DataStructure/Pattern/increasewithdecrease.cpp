@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int i, j, n;
+    cin >> n;
+    char ch;
+    // int k=2*n-1;
+    for (i = 0; i < n; i++)
+    {
+        ch = 'A' - 1;
+        for (j = 0; j <= 2 * i; j++)
+        {
+            if (i >= j)
+            {
+                ch++;
+                cout << ch;
+            }
+            // else if(j==i+1)
+            //     cout<<ch;
+            else
+                cout << --ch;
+        }
+        cout << endl;
+    }
+    return 0;
+}
