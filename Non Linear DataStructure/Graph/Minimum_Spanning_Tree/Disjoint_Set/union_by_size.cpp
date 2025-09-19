@@ -30,7 +30,7 @@ public:
 
     }
 
-    void connect_with_node(int u, int v){
+    void connect_with_node_by_size(int u, int v){
         int parent_u = findParent(u);
         int parent_v = findParent(v);
         
@@ -65,7 +65,7 @@ if(ds.findParent(3) == ds.findParent(7)){
 else{
     cout<<"Not Same Parent"<<endl;
 }
-ds.connect_with_node(3, 7);
+ds.connect_with_node_by_size(3, 7);
 
 cout<<"After node creation: "<<endl;
 if(ds.findParent(3) == ds.findParent(7)){
