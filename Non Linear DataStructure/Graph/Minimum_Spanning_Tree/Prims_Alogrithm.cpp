@@ -1,3 +1,10 @@
+// #include<iostream>
+// #include<algorithm>
+// #include<vector>
+// #include<unordered_map>
+// #include<queue>
+#include <bits/stdc++.h>
+using namespace std;
 class Solution {
 private:
     int solveMinimumSpanningTreeUsingPrimsAlgo(unordered_map<int, vector<pair<int, int>>>& adjList, int V){
@@ -48,3 +55,16 @@ private:
         return solveMinimumSpanningTreeUsingPrimsAlgo(adjList, V);
     }
 };
+
+int main(){
+    Solution s;
+    int V = 9; 
+
+    // vector<vector<int>> edges = {{0, 1, 5},{1, 2, 3}, {0, 2, 1}};
+    // vector<vector<int>> edges = { {0, 1, 2}, {0, 2, 1}, {1, 2, 1}, {2, 3, 2}, {3, 4, 1}, {4, 2, 2}};
+    vector<vector<int>> edges = { {1,5,4}, {1,4,1}, {1, 2, 2}, {2, 4, 3}, {2, 3, 3}, {3, 4, 5}, {2,6,7}, {3,6,8}, {4,5,9}};
+
+    cout<<"MST IS: "<<s.spanningTree(V, edges);
+
+    return 0;
+}
