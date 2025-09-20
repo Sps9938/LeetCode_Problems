@@ -38,43 +38,38 @@ TreeNode* createTree() {
   return root;
 
 }
-
-
 class Solution {
 public:
-    int d = 0;
+    bool flag = false;
 private:
     int maxDepth(TreeNode*& root){
         if(root == NULL) return 0;
 
-        int left = maxDepth(root->left);
-        int right = maxDepth(root->right);
-        
-        int currD = left + right;
-        d = max(d, currD);
-        return max(left, right) + 1;
+        int leftHeight = maxDepth(root->left);
+        int rightHeight = maxDepth(root->right);
 
+        if(abs(leftHeight-rightHeight) > 1) flag= true; 
+
+        return max(leftHeight, rightHeight) + 1;
     }
 public:
-    int diameterOfBinaryTree(TreeNode* root) {
-        
-        
-        //root-> chode ka
-        //root->left maxDept + root->right maxDepth
+    bool isBalanced(TreeNode* root) {
+        if(root == NULL) return true;
 
-        maxDepth(root);
-
-        return d;
+       maxDepth(root);
+       if(flag) return false;
+        return true;
     }
 };
 
 
 int main() {
 //5 10 9 -1 -1 4 -1 -1 6 8 -1 -1 7 -1 -1
+// 1 2 3 4 -1 -1 4 -1 -1 3 -1 -1 2 -1 -1
 	  TreeNode* root = createTree();
 	  //cout << root->data << endl;
 	 Solution s1;
-    cout<<"Diameter of Bt is: "<<s1.diameterOfBinaryTree(root)<<endl;
+    cout<<"isBalanced: "<<s1.isBalanced(root)<<endl;
 
   return 0;
 }
