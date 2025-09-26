@@ -60,6 +60,11 @@
     "vector": "cpp",
     "iostream": "cpp",
     "new": "cpp",
-    "ostream": "cpp"
+    "ostream": "cpp",
+    "deque": "cpp",
+    "list": "cpp",
+    "string": "cpp",
+    "valarray": "cpp",
+    "forward_list": "cpp"
   }
 }
