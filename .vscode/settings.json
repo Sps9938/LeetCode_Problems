@@ -65,6 +65,11 @@
     "list": "cpp",
     "string": "cpp",
     "valarray": "cpp",
-    "forward_list": "cpp"
+    "forward_list": "cpp",
+    "bitset": "cpp",
+    "array": "cpp",
+    "initializer_list": "cpp",
+    "regex": "cpp",
+    "utility": "cpp"
   }
 }
