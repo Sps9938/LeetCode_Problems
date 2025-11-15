@@ -19,8 +19,6 @@ int solveSJF(vector<int> &arr){
 int main(){
 
     vector<int> arr = {4, 1, 3, 7, 2};
-    
-
     int wt = solveSJF(arr);
     cout<<"Average of waiting time is: "<<wt;
     return 0;
